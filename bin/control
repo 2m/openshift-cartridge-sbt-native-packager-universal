@@ -13,7 +13,7 @@ function start {
 
     rm -f target/universal/stage/RUNNING_PID
 
-    EXECUTABLE=$(find target/universal/stage/bin/ -maxdepth 1 -perm -764 -type f)
+    EXECUTABLE=$(find target/universal/stage/bin/ -maxdepth 1 -perm -744 -type f)
     nohup ${EXECUTABLE} -mem 512 > $OPENSHIFT_SNPU_DIR/logs/app.log 2>&1 &
 }
 
