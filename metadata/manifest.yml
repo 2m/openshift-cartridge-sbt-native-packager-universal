@@ -1,0 +1,30 @@
+Name: SNPU
+Cartridge-Short-Name: SBT Native Packager Universal
+Cartridge-Version: '1.0.0'
+Cartridge-Vendor: 2m
+Display-Name: SBT Native Packager Universal Runner
+Description: "SBT Native Packager Universal Runner"
+Version: '1.0.0'
+License: "Apache 2"
+Vendor: none
+Categories:
+  - service
+  - sbt
+  - scala
+Provides:
+  - snpu
+Scaling:
+  Min: 1
+  Max: -1
+Endpoints:
+  - Private-IP-Name:   IP
+    Private-Port-Name: PORT
+    Private-Port:      8080
+    Public-Port-Name:  PROXY_PORT
+    Mappings:
+      - Frontend:      ""
+        Backend:       ""
+        Options:       { websocket: true }
+      - Frontend:      "/health"
+        Backend:       ""
+        Options:       { health: true }
