@@ -11,6 +11,7 @@ function start {
     # build on first time
     [ -d target ] || build
 
+    # this can be a leftover from a dead play app
     rm -f target/universal/stage/RUNNING_PID
 
     EXECUTABLE=$(ls target/universal/stage/bin/ | grep -v bat) # we need other one, not bat
@@ -18,9 +19,7 @@ function start {
 }
 
 function stop {
-    cd $OPENSHIFT_REPO_DIR
-    PID=$(cat target/universal/stage/RUNNING_PID)
-    kill $PID
+    killall java || true
 }
 
 function restart {
