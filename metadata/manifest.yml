@@ -11,6 +11,7 @@ Categories:
   - service
   - sbt
   - scala
+  - web_framework # at least one web_framework cartridge must be in any application
 Provides:
   - snpu
 Scaling:
