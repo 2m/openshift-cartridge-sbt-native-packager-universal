@@ -14,7 +14,7 @@ function start {
     rm -f target/universal/stage/RUNNING_PID
 
     EXECUTABLE=$(find target/universal/stage/bin/ -maxdepth 1 -perm -764 -type f)
-    nohup ${EXECUTABLE} -mem 512 > $OPENSHIFT_SNPU_LOG_DIR/app.log 2>&1 &
+    nohup ${EXECUTABLE} -mem 512 > $OPENSHIFT_SNPU_DIR/logs/app.log 2>&1 &
 }
 
 function stop {

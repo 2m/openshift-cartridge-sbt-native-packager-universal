@@ -1,5 +1,5 @@
 Name: snpu
-Cartridge-Short-Name: SBT Native Packager Universal
+Cartridge-Short-Name: SNPU # used in cartridge specific environment variable names
 Cartridge-Version: '1.0.0'
 Cartridge-Vendor: 2m
 Display-Name: SBT Native Packager Universal Runner
