@@ -9,5 +9,3 @@ cd ${OPENSHIFT_DATA_DIR}
 wget http://dl.bintray.com/sbt/native-packages/sbt/${SBT_VERSION}/sbt-${SBT_VERSION}.zip -O sbt.zip
 unzip sbt.zip
 rm sbt.zip
-
-ln -s ${OPENSHIFT_DATA_DIR}/sbt/bin/sbt ${OPENSHIFT_DATA_DIR}/sbt

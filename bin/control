@@ -37,7 +37,7 @@ function build {
     unset GIT_WORK_TREE
 
     cd ${OPENSHIFT_REPO_DIR}
-    sbt -mem 512 clean stage
+    ${OPENSHIFT_DATA_DIR}/sbt/bin/sbt -mem 512 clean stage
 }
 
 function tidy {
